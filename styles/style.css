@@ -1,3 +1,121 @@
 * {
   font-family: "Inter";
 }
+header {
+	top: 3vh;
+	width: 100%;
+	z-index: 1000;
+}
+
+nav {
+	backdrop-filter: blur(8px);
+	background-color: rgba(78, 45, 57, 0.6);
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	border-radius: 16px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between; /* Align logo left, links right */
+	align-items: center;
+	width: 90vw;
+	padding: 4px;
+	font-family: "Inter", sans-serif;
+	font-size: 1em;
+}
+nav:has(.dropbtn:hover, .dropdown a:hover, .dropdown-content:hover) {
+	border-bottom-right-radius: 0px;
+}
+.nav-logo {
+	display: flex;
+	align-items: center;
+	padding: 12px;
+}
+
+.nav-logo-text {
+	font-weight: bold;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+}
+
+.nav-links {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	align-items: center;
+}
+nav ul {
+	list-style-type: none;
+	margin: 8px 8px;
+	padding: 0;
+	overflow: hidden;
+}
+nav li {
+	float: right;
+	text-align: right;
+}
+nav li a, li span {
+	display: inline-block;
+	color: rgb(255, 255, 255);
+	text-align: center;
+	padding: 12px;
+	text-decoration: none;
+	z-index: 1000;
+	border-radius: 12px;
+}
+.dropbtn {
+	display: inline-block;
+	text-align: center;
+	text-decoration: none;
+	z-index: 1000;
+}
+nav li a:hover, .dropdown a:hover .dropbtn, nav-logo:hover, span:hover {
+	background-color: rgb(90, 36, 48);
+	color: white;
+	transition: all 0.1s ease-in;
+}
+nav li .dropdown {
+	display: inline-block;
+	padding: 4px;
+}
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: rgba(78, 45, 57, 0.6); /* 78,45,57 */
+	z-index: -1;
+	padding: 4px;
+	padding-top: 8px;
+	border-radius: 0px 0px 16px 16px;
+	top: 51px;
+	right: 0;
+	left: auto;
+}
+.dropdown-content a {
+	color: rgb(255, 255, 255);
+	padding: 16px;
+	text-decoration: none;
+	display: block;
+	text-align: right;
+	border-radius: 12px;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+	nav {
+		background-color: rgb(0, 0, 0);
+	}
+}
+
+button {
+	width: 9vw;
+	background-color: rgb(90, 36, 48);
+	color: white;
+	border: none;
+	border-radius: 12px;
+	padding: 12px 24px;
+	font-size: 1.2em;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
